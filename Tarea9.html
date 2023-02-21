@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Ejercicio basico con switch</h1>
+    <h2>dias de la semana</h2>
+
+    <label for="data">Ingresa opción</label>
+    <input type="Number" id="data">
+    <br>
+    <button type="button" onclick="Selection()">seleccionar</button>
+
+    <script>
+
+        function Selection() {
+
+            let dia = Number(document.getElementById("data").value);
+            switch (dia) {
+                case 1:
+                    alert("lunes");
+                    break;
+                case 2:
+                    alert("martes");
+                    break;
+                case 3:
+                    alert("miercoles");
+                    break;
+                case 4:
+                    alert("jueves");
+                    break;
+                case 5:
+                    alert("viernes");
+                    break;
+                case 6:
+                    alert("sabado");
+                    break;
+                case 7:
+                    alert("domingo");
+                    break;
+                default:
+                    alert("no se puede seleccionar");
+                    break;
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

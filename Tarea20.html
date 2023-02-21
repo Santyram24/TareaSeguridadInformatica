@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Do you want to get some coffee with me?</h1>
+        <button type="button" id="b1" class="posicionnormal">no</button>
+        <button type="button" id="b2" onclick="yes()">si</button>
+    </div>
+
+    <style>
+        body{
+            font-family: Arial;
+        }
+        #b1{
+            
+            padding: 10px 20px;
+            background-color: aqua;
+            border: none;
+            color: white;
+        }
+        #b2{
+            padding: 10px 20px;
+            background-color: aqua;
+            border: none;
+            color: white;
+        }
+        .container{
+            width: 200px;
+            margin: 0px auto;
+        }
+        .mover1{
+            position: absolute;
+            top: 30px;
+            right: 12px;
+        }
+        .mover2{
+            position: absolute;
+            bottom: 80px;
+            
+            left: 60px;
+        }
+        .mover3{
+            position: absolute;
+            
+            right: 49px;
+        }
+        .mover4{
+            position: absolute;
+            top: 15px;
+            right: 29px;
+        }
+
+        .mover5{
+            position: absolute;
+            bottom: 34px;
+            left: 74px;
+        }
+
+
+    </style>
+
+    <script>
+        let boton=document.querySelector('#b1');
+        boton.addEventListener('mouseover',movimiento);
+        function movimiento(){
+            if (boton.classList.contains('posicionnormal')) {
+                boton.classList.replace('posicionnormal','mover1');
+            }else if (boton.classList.contains('mover1')) {
+                boton.classList.replace('mover1','mover2');
+            }else if (boton.classList.contains('mover2')) {
+                boton.classList.replace('mover2','mover3');
+            }else if (boton.classList.contains('mover3')) {
+                boton.classList.replace('mover3','mover4');
+            }else if (boton.classList.contains('mover4')) {
+                boton.classList.replace('mover4','mover5');
+            }else if (boton.classList.contains('mover5')) {
+                boton.classList.replace('mover5','posicionnormal');
+            }    
+        }
+        function yes(){
+           alert("i'll be a pleasure talk with you again, see you in the cafeteria's house"); 
+        }
+    </script>
+</body>
+</html>

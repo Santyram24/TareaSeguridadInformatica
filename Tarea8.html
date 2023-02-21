@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ingresar elementos a un arreglo</h1>
+    <label for="data">ingresar elemento</label>
+    <input type="text" id="data">
+    <button type="button" onclick="agregar()">agregar</button>
+    <br>
+    <label for="datos">Mostrar Arreglo</label>
+    <button type="button" onclick="mostrar()">mostrar</button>
+    <script>
+      let arreglo=[];
+
+      const agregar=()=>{
+         let elemento=document.getElementById("data").value;
+        
+         arreglo.push(elemento);
+
+         document.getElementById("data").value="";
+
+         
+
+      }
+
+      const mostrar=()=>{
+        document.write("[");
+        for(i in arreglo){
+            if(i==arreglo.length-1){
+                document.write(arreglo[i]);
+
+            }else{
+
+                document.write(arreglo[i]+",");
+            }
+          
+        }
+        document.write("]");
+      }
+
+    </script>
+</body>
+</html>

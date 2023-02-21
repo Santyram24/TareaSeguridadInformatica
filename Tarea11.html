@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>ejercicio de while</h1>
+    <p>cuenta del uno al 20:</p>
+    
+
+    <script>
+        let i = 1;
+        let arreglo = [];
+        while (i <= 20) {
+            arreglo.push(i);
+            i++;
+         }
+         document.write("[");
+         for (i in arreglo) {
+            if(i==arreglo.length-1){
+                document.write(arreglo[i]);
+
+            }else{
+
+                document.write(arreglo[i]+",");
+            }
+          
+        }
+        document.write("]");
+    </script>
+</body>
+
+</html>

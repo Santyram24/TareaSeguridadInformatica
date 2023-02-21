@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="enun">cambio de color de la pagina</h1>
+    <label for="data" id="data1">Ingresa el nombre de los colores</label>
+    <input type="text" id="data">
+    <button type="button" id="b1" onclick="color()">cambiar color</button>
+
+    <script>
+        function rojo(){
+            document.body.style.backgroundColor="red";
+            document.getElementById("enun").style.color="black";
+            document.getElementById("data1").style.color="white";
+        }
+        function azul(){
+            document.body.style.backgroundColor="blue";
+            document.getElementById("enun").style.color="white";
+            document.getElementById("data1").style.color="white";
+    }
+        function amarillo(){
+            document.body.style.backgroundColor="yellow";
+            document.getElementById("enun").style.color="black";
+            document.getElementById("data1").style.color="black";
+        }
+
+        function color(){
+            let opcion=document.getElementById("data").value; 
+
+            switch (opcion) {
+                case "rojo":
+                    rojo();
+                    break;
+                case "azul":
+                    azul();
+                    break;
+                case "amarillo":
+                    amarillo();
+                    break;    
+                default:
+                    alert("seleccione otro color")
+                    break;
+            }
+        }
+        
+
+    
+    </script>
+</body>
+</html>

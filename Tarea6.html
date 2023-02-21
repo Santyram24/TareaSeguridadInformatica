@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Division de dos numeros</h1>
+    <label for="n1">inserte el primer numero:</label>
+    <input type="number" id="n1">
+    <br>
+    <label for="n2">inserte el segundo numero:</label>
+    <input type="number" id="n2">
+    <br>
+    <button type="button" onclick="div()">dividir</button>
+    <p id="div"></p>   
+
+    <script>
+        
+        const  div=()=>{
+            var num1=document.getElementById("n1").value;
+            var num2=document.getElementById("n2").value;
+            if(num2==0){
+                document.getElementById("div").innerHTML="No se puede dividir entre 0";
+
+            }else{
+                var resul =Number(num1)/Number(num2);
+                document.getElementById("div").innerHTML="el resultado es ="+resul ;
+            }
+            
+
+        }   
+        
+    </script>
+</body>
+</html>
