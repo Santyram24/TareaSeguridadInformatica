@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="checkbox1">Cristiano Ronaldo:</label>
+    <input type="checkbox" id="checkbox1">
+    <p id="mensaje"></p>
+    <br>
+    <label for="checkbox2">Leo Messi:</label>
+    <input type="checkbox" id="checkbox2">
+    <p id="mensaje2"></p>
+
+    <script>
+      const checkbox1 = document.getElementById("checkbox1");
+      const mensaje1 = document.getElementById("mensaje");
+      const checkbox2 = document.getElementById("checkbox2");
+      const mensaje2 = document.getElementById("mensaje2");
+
+      checkbox1.addEventListener("change", function() {
+        if (this.checked) {
+          mensaje1.textContent = "¡Seleccinaste al bicho siuuuu!";
+        } else {
+          mensaje1.textContent = "";
+        }
+      });
+
+      checkbox2.addEventListener("change",function () {
+        if (this.checked) {
+          mensaje2.textContent = "¡Seleccinaste a Messi 'Que mira bobo'!";
+        } else {
+          mensaje2.textContent = "";
+        }
+
+        
+      });
+    </script>
+</body>
+</html>

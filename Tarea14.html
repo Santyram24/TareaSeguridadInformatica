@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- el interes se calcula de esta forma=
+        saldoFinal = saldoInicial * (1 + tasaInteres) ^ años -->
+    <div>
+        <h1>Calcular tasa de interes anual del 5% despues de 5 años </h1>
+        <h2>Teniendo en cuenta que se comienza con un saldo de 10000</h2>
+        <p id="saldo"></p>
+
+    </div>
+    <script>
+        const saldoInicial = 10000;
+        const tasaInteres = 0.05;
+        const años = 5;
+
+        let saldoActual = saldoInicial;
+        let contadorAños = 1;
+
+        while (contadorAños <= años) {
+            saldoActual *= (1 + tasaInteres);
+            contadorAños++;
+        }
+
+        document.getElementById("saldo").innerHTML =
+            "El saldo después de " + años + " años es: " + saldoActual.toFixed(2);
+    </script>
+</body>
+
+</html>
